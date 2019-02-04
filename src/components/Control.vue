@@ -2,8 +2,10 @@
   import { onLeftClick, isPromise } from '../utils'
   import SingleValue from './SingleValue'
   import MultiValue from './MultiValue'
-  import DeleteIcon from './icons/Delete'
-  import ArrowIcon from './icons/Arrow'
+  // import DeleteIcon from './icons/Delete'
+  // import ArrowIcon from './icons/Arrow'
+  import ChevronIcon from './icons/Chevron'
+  import CloseIcon from './icons/CloseRound'
 
   export default {
     name: 'vue-treeselect--control',
@@ -61,9 +63,10 @@
 
         if (!this.shouldShowX) return null
 
+        // <DeleteIcon class="vue-treeselect__x" />
         return (
           <div class="vue-treeselect__x-container" title={title} onMousedown={this.handleMouseDownOnX}>
-            <DeleteIcon class="vue-treeselect__x" />
+            <CloseIcon class="vue-treeselect__x" />
           </div>
         )
       },
@@ -79,7 +82,7 @@
 
         return (
           <div class="vue-treeselect__control-arrow-container" onMousedown={this.handleMouseDownOnArrow}>
-            <ArrowIcon class={arrowClass} />
+            <ChevronIcon class={arrowClass} />
           </div>
         )
       },

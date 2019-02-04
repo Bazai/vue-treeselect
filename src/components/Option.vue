@@ -2,7 +2,7 @@
   import { UNCHECKED, INDETERMINATE, CHECKED } from '../constants'
   import { onLeftClick } from '../utils'
   import Tip from './Tip'
-  import ArrowIcon from './icons/Arrow'
+  import ChevronIcon from './icons/Chevron'
 
   let arrowPlaceholder, checkMark, minusMark
 
@@ -89,7 +89,7 @@
           return (
             <div class="vue-treeselect__option-arrow-container" onMousedown={this.handleMouseDownOnArrow}>
               <transition {...transitionProps}>
-                <ArrowIcon class={arrowClass} />
+                <ChevronIcon class={arrowClass} />
               </transition>
             </div>
           )
